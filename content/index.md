@@ -3,13 +3,13 @@ comments: false
 title: Alex Sun · 学习笔记
 ---
 
-## 关于我
+## 关于我 · About Me
 
-- 北美程序员
-- 15 年开发经验
-- 喜欢探索未知世界
+我是 Alex Sun，北美程序员，有 15 年开发经验，喜欢探索未知世界。这里记录我拆解开源 AI 项目的学习笔记，每篇配一份 PPT。
 
-GitHub：[alexsunlee](https://github.com/alexsunlee) · 有问题或建议？欢迎到 [[留言板]] 留言
+I'm Alex Sun, a software developer in North America with 15 years of experience and a curiosity for the unknown. Here I share notes on how open-source AI projects are built, each with a slide deck.
+
+有问题或建议？欢迎到 [[留言板]] 留言。Questions or ideas? Leave a message on the [[留言板|guestbook]].
 
 ## 学习笔记
 
