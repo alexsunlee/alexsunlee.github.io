@@ -1,6 +1,6 @@
 # alexsunlee.github.io
 
-Alex Sun 的学习笔记站：AI 开源项目架构拆解，每篇配一份 PPT。
+Alex的学习空间：AI 开源项目架构拆解与演讲笔记，项目拆解配有 PPT。
 
 在线阅读：<https://alexsunlee.github.io>
 

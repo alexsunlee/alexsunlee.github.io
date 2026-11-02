@@ -5,9 +5,9 @@ title: Alex的学习空间
 
 ## 关于我 · About Me
 
-我是 Alex Sun，北美程序员，有 15 年开发经验，喜欢探索未知世界。这里记录我的 AI 学习笔记：拆解开源项目，也细读重要演讲。
+我是 Alex，北美程序员，有 15 年开发经验，喜欢探索未知世界。这里记录我的 AI 学习笔记：拆解开源项目，也细读重要演讲。
 
-I'm Alex Sun, a software developer in North America with 15 years of experience and a curiosity for the unknown. Here I share my AI study notes: how open-source projects are built, and talks worth a close read.
+I'm Alex, a software developer in North America with 15 years of experience and a curiosity for the unknown. Here I share my AI study notes: how open-source projects are built, and talks worth a close read.
 
 <div class="poem">
 <p>本是后山人，偶作前堂客。</p>
