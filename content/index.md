@@ -11,6 +11,12 @@ I'm Alex Sun, a software developer in North America with 15 years of experience 
 
 有问题或建议？欢迎到 [[留言板]] 留言。Questions or ideas? Leave a message on the [[留言板|guestbook]].
 
+## 讨论群 · Community
+
+欢迎加入 Discord 讨论群，一起交流 AI 与编程。Join the Discord server to chat about AI and programming.
+
+<a class="discord-join" href="https://discord.gg/QhQPNtDmf" target="_blank" rel="noopener">加入 Beyond Carbon-Base · Join on Discord</a>
+
 ## 学习笔记
 
 拆解开源 AI 项目的架构与设计，每篇配一份 PPT，持续更新。
