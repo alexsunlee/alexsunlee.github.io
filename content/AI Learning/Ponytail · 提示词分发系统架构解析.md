@@ -1431,11 +1431,6 @@ review 和 audit 以一句 "changes no code" 收尾；debt 和 gain 另有 `## B
 
 ## 相关
 
-- [[Ponytail · YouTube 演讲稿]]
-- [[AI Agent 提示词工程]]
-- [[YAGNI 与过度工程]]
-- [[Claude Code 插件与 Hook 机制]]
-- [[多宿主 Agent 适配器模式]]
 - 原仓库：https://github.com/DietrichGebert/ponytail
 - 快速试用：Claude Code 依次运行 `/plugin marketplace add DietrichGebert/ponytail`、`/plugin install ponytail@ponytail`；其他 agent 把 `AGENTS.md`（32 行）拷进项目根目录（README「Install」节）
 - 宿主安装大全：仓库内 `INSTALL.md`；宿主适配矩阵：`docs/agent-portability.md`
