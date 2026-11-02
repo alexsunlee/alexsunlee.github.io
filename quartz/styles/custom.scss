@@ -1,0 +1,9 @@
+@use "./variables.scss" as *;
+
+// put your custom CSS here!
+
+// Links to notes not published here: show as plain text, not a 404 link.
+a.internal.broken {
+  pointer-events: none;
+  background-color: transparent;
+}
