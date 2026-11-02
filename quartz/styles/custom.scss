@@ -141,22 +141,21 @@ body[data-slug^="tags/"] article + hr {
   display: none;
 }
 
-// Poem at the bottom of the right sidebar.
-.poem-side {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid var(--lightgray);
-  font-size: 0.85rem;
+// Poem in About Me.
+.poem {
+  margin: 1.2rem 0;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  border-left: 3px solid var(--secondary);
   font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
   color: var(--darkgray);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   p {
-    margin: 0.3rem 0;
+    margin: 0.35rem 0;
     line-height: 1.7;
   }
   // The phrase that links to the YouTube channel.
   a.poem-link {
-    font-size: 1.15em;
+    font-size: 1.2em;
     font-weight: 700;
     color: var(--secondary);
     background-color: transparent;
@@ -165,5 +164,41 @@ body[data-slug^="tags/"] article + hr {
     &:hover {
       border-bottom-style: solid;
     }
+  }
+}
+
+// Notes that open with an H1 repeat the page title right above it; hide that first H1.
+article > .markdown-preview-view > h1:first-child {
+  display: none;
+}
+
+// Keep the site name on one line in the phone header.
+@media all and (max-width: 800px) {
+  .page-title {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+}
+
+// 404: centred instead of pinned to the top-left corner.
+body[data-slug="404"] .center.minimal {
+  max-width: 32rem;
+  margin: 20vh auto 0;
+  text-align: center;
+}
+
+// When a note's only top-level TOC entry is its (hidden) H1 title, drop it and pull the rest one level left.
+.toc ul:has(> li.depth-0:first-child):not(:has(> li.depth-0 ~ li.depth-0)) {
+  & > li.depth-0 {
+    display: none;
+  }
+  & > li.depth-1 {
+    padding-left: 0;
+  }
+  & > li.depth-2 {
+    padding-left: 1rem;
+  }
+  & > li.depth-3 {
+    padding-left: 2rem;
   }
 }

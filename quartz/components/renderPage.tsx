@@ -75,7 +75,9 @@ export function pageResources(
 
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   // ?v= changes every build, so browsers don't keep a stale sidebar for the 10-minute GitHub Pages cache.
-  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}?v=${BUILD_ID}").then(data => data.json())`
+  // The explorer scrolls its active item into view when no scroll position is saved, which drags the whole page
+  // down on every note; a saved 0 makes it skip that.
+  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}?v=${BUILD_ID}").then(data => data.json());try{sessionStorage.getItem("explorerScrollTop")===null&&sessionStorage.setItem("explorerScrollTop","0")}catch(e){}`
 
   const resources: StaticResources = {
     css: [
