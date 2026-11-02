@@ -1,9 +1,9 @@
 import { QuartzComponentConstructor } from "./types"
 
-// Site-wide footer: the poem, with 坐井说天阔 linking to the YouTube channel.
-function PoemFooter() {
+// The poem at the bottom of the right sidebar, with 坐井说天阔 linking to the YouTube channel.
+function Poem() {
   return (
-    <footer class="poem-footer">
+    <div class="poem-side">
       <p>本是后山人，偶作前堂客。</p>
       <p>
         醉舞经阁半卷书，
@@ -20,8 +20,8 @@ function PoemFooter() {
       </p>
       <p>大志戏功名，海斗量福祸。</p>
       <p>论到囊中羞涩时，怒指乾坤错。</p>
-    </footer>
+    </div>
   )
 }
 
-export default (() => PoemFooter) satisfies QuartzComponentConstructor
+export default (() => Poem) satisfies QuartzComponentConstructor
