@@ -9,13 +9,6 @@ title: Alex的学习空间
 
 I'm Alex, a software developer in North America with 15 years of experience and a curiosity for the unknown. Here I share my AI study notes: how open-source projects are built, and talks worth a close read.
 
-<div class="poem">
-<p>本是后山人，偶作前堂客。</p>
-<p>醉舞经阁半卷书，<a class="poem-link" href="https://www.youtube.com/@alexsunrise1984" target="_blank" rel="noopener" title="我的 YouTube 频道">坐井说天阔</a>。</p>
-<p>大志戏功名，海斗量福祸。</p>
-<p>论到囊中羞涩时，怒指乾坤错。</p>
-</div>
-
 有问题或建议？欢迎到 [[留言板]] 留言。Questions or ideas? Leave a message on the [[留言板|guestbook]].
 
 ## 讨论群 · Community
