@@ -30,6 +30,8 @@ interface RenderComponents {
 }
 
 const headerRegex = new RegExp(/h[1-6]/)
+const BUILD_ID = Date.now()
+
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
@@ -72,7 +74,8 @@ export function pageResources(
   })
 
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
-  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  // ?v= changes every build, so browsers don't keep a stale sidebar for the 10-minute GitHub Pages cache.
+  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}?v=${BUILD_ID}").then(data => data.json())`
 
   const resources: StaticResources = {
     css: [
