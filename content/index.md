@@ -5,9 +5,9 @@ title: Alex的学习空间
 
 ## 关于我 · About Me
 
-我是 Alex Sun，北美程序员，有 15 年开发经验，喜欢探索未知世界。这里记录我拆解开源 AI 项目的学习笔记，每篇配一份 PPT。
+我是 Alex Sun，北美程序员，有 15 年开发经验，喜欢探索未知世界。这里记录我的 AI 学习笔记：拆解开源项目，也细读重要演讲。
 
-I'm Alex Sun, a software developer in North America with 15 years of experience and a curiosity for the unknown. Here I share notes on how open-source AI projects are built, each with a slide deck.
+I'm Alex Sun, a software developer in North America with 15 years of experience and a curiosity for the unknown. Here I share my AI study notes: how open-source projects are built, and talks worth a close read.
 
 有问题或建议？欢迎到 [[留言板]] 留言。Questions or ideas? Leave a message on the [[留言板|guestbook]].
 
@@ -19,7 +19,7 @@ I'm Alex Sun, a software developer in North America with 15 years of experience 
 
 ## 学习笔记
 
-拆解开源 AI 项目的架构与设计，每篇配一份 PPT，持续更新。
+拆解开源 AI 项目的架构与设计，也细读值得关注的演讲；项目拆解配有 PPT，持续更新。
 
 <div class="note-list">
 <div class="note-card">
@@ -35,5 +35,12 @@ I'm Alex Sun, a software developer in North America with 15 years of experience 
 <p class="note-card-meta"><span>更新于 2026-10-09</span><span>基于 commit 2c60614</span><span>约 23 分钟</span></p>
 <p class="note-card-tags"><span>行为准则</span><span>Claude Code</span><span>Cursor</span></p>
 <p class="note-card-actions"><a class="note-card-read" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析">阅读原文 →</a><a class="note-card-ppt" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析.pptx" download data-router-ignore>下载 PPT · 13 页 · 0.2 MB</a></p>
+</div>
+<div class="note-card">
+<a class="note-card-title" href="/ai-learning/jack-clark-imf-演讲-·-奇点已经开始">Jack Clark IMF 演讲：奇点已经开始</a>
+<p class="note-card-summary">Anthropic 联合创始人 Jack Clark 在 IMF 年会上对各国财长和央行行长说：AI 已经开始自己做科学发现、参与研发下一代 AI，奇点已经开始。笔记梳理他的证据、经济推演（乐观情形下美国 GDP 2030 年达 44 万亿美元）、人类必须做出的三个选择，以及外界的争议。</p>
+<p class="note-card-meta"><span>更新于 2026-10-22</span><span>演讲于 2026-10-17 · 曼谷</span><span>约 15 分钟</span></p>
+<p class="note-card-tags"><span>AI 政策</span><span>经济学</span><span>Anthropic</span></p>
+<p class="note-card-actions"><a class="note-card-read" href="/ai-learning/jack-clark-imf-演讲-·-奇点已经开始">阅读原文 →</a></p>
 </div>
 </div>
