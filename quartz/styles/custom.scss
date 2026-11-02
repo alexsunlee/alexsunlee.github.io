@@ -7,3 +7,27 @@ a.internal.broken {
   pointer-events: none;
   background-color: transparent;
 }
+
+// Folder pages carry their own note + PPT table; the auto list only repeats it. Tag pages keep theirs.
+body:not([data-slug^="tags/"]) .page-listing {
+  display: none;
+}
+
+// Tags as one row of chips, not a bullet column.
+.page-listing ul.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  & > li {
+    margin: 0;
+  }
+}
+
+// Plain links inside tables; the highlight box looks cluttered in cells.
+article table a.internal {
+  background-color: transparent;
+  padding: 0;
+}
