@@ -134,3 +134,23 @@ a.note-card-title {
     color: var(--darkgray);
   }
 }
+
+// The divider before the comments; with no comments after it, it just dangles.
+hr:has(+ .page-footer:empty),
+body[data-slug^="tags/"] article + hr {
+  display: none;
+}
+
+// Poem in About Me.
+.poem {
+  margin: 1.2rem 0;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  border-left: 3px solid var(--secondary);
+  font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  color: var(--darkgray);
+  letter-spacing: 0.08em;
+  p {
+    margin: 0.35rem 0;
+    line-height: 1.7;
+  }
+}
