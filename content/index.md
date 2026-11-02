@@ -1,4 +1,5 @@
 ---
+comments: false
 title: Alex Sun · 学习笔记
 ---
 
@@ -8,7 +9,7 @@ title: Alex Sun · 学习笔记
 - 15 年开发经验
 - 喜欢探索未知世界
 
-GitHub：[alexsunlee](https://github.com/alexsunlee)
+GitHub：[alexsunlee](https://github.com/alexsunlee) · 有问题或建议？欢迎到 [[留言板]] 留言
 
 ## 学习笔记
 

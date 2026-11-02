@@ -31,3 +31,8 @@ article table a.internal {
   background-color: transparent;
   padding: 0;
 }
+
+// Tag pages are generated lists; comments belong on notes and the guestbook.
+body[data-slug^="tags/"] .giscus {
+  display: none;
+}
