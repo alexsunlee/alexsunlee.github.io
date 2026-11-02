@@ -136,8 +136,6 @@ tags:
 
 ## 相关链接
 
-- [[AI Learning]]
-- [[发刊词 · AI 时代，谁还适合做开发]]
 - Vernor Vinge, *The Coming Technological Singularity* (1993)
 - Carl Sagan, *Pale Blue Dot*（《暗淡蓝点》，1994）
 
