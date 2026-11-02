@@ -153,4 +153,16 @@ body[data-slug^="tags/"] article + hr {
     margin: 0.35rem 0;
     line-height: 1.7;
   }
+  // The line that links to the YouTube channel.
+  a.poem-link {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--secondary);
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 1px dashed var(--secondary);
+    &:hover {
+      border-bottom-style: solid;
+    }
+  }
 }

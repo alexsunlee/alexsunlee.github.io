@@ -11,7 +11,7 @@ I'm Alex Sun, a software developer in North America with 15 years of experience 
 
 <div class="poem">
 <p>本是后山人，偶作前堂客。</p>
-<p>醉舞经阁半卷书，坐井说天阔。</p>
+<p>醉舞经阁半卷书，<a class="poem-link" href="https://www.youtube.com/@alexsunrise1984" target="_blank" rel="noopener" title="我的 YouTube 频道">坐井说天阔</a>。</p>
 <p>大志戏功名，海斗量福祸。</p>
 <p>论到囊中羞涩时，怒指乾坤错。</p>
 </div>
