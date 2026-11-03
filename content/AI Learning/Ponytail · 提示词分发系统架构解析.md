@@ -50,16 +50,16 @@ Ponytail 是一个开源项目（MIT），装进 AI 编程助手之后，让 age
 
 **装好之后怎么用（以 Claude Code 为例）**：规则注入、代码地图、子 agent 注入、band 都是自动的，不用任何操作；需要手动的都是斜杠命令（README「Commands」节）：
 
-| 想做什么 | 输入 |
-|---|---|
-| 切换级别 | `/ponytail lite`、`/ponytail full`、`/ponytail ultra` |
-| 关闭 / 重新打开 | 整句说 `stop ponytail` 或 `normal mode`，也可以 `/ponytail off`；重新打开输入 `/ponytail` |
-| 改默认级别 | `/ponytail default lite`（下个会话生效），或环境变量 `PONYTAIL_DEFAULT_MODE` |
-| 审查这次改动 / 整个仓库 | `/ponytail-review`（可跟 `staged`、`branch` 或 PR 链接）/ `/ponytail-audit` |
-| 列出技术债 / 看实测数据 / 速查 | `/ponytail-debt` / `/ponytail-gain` / `/ponytail-help` |
-| 隐藏或显示 band | `/ponytail band`（或 `on` / `off`） |
-| 打开看板 / 导入历史会话 | 点 band 上的 Board 按钮 / `/ponytail band import` |
-| 关掉代码地图 | 环境变量 `PONYTAIL_MAP=0` |
+| 想做什么               | 输入                                                                         |
+| ------------------ | -------------------------------------------------------------------------- |
+| 切换级别               | `/ponytail lite`、`/ponytail full`、`/ponytail ultra`                        |
+| 关闭 / 重新打开          | 整句说 `stop ponytail` 或 `normal mode`，也可以 `/ponytail off`；重新打开输入 `/ponytail` |
+| 改默认级别              | `/ponytail default lite`（下个会话生效），或环境变量 `PONYTAIL_DEFAULT_MODE`             |
+| 审查这次改动 / 整个仓库      | `/ponytail-review`（可跟 `staged`、`branch` 或 PR 链接）/ `/ponytail-audit`        |
+| 列出技术债 / 看实测数据 / 速查 | `/ponytail-debt` / `/ponytail-gain` / `/ponytail-help`                     |
+| 隐藏或显示 band         | `/ponytail band`（或 `on` / `off`）                                           |
+| 打开看板 / 导入历史会话      | 点 band 上的 Board 按钮 / `/ponytail band import`                               |
+| 关掉代码地图             | 环境变量 `PONYTAIL_MAP=0`                                                      |
 
 插件的 skill 在命令菜单里也会以带命名空间的形式出现，例如 `/ponytail:ponytail-review`，两种写法都能用。
 
@@ -572,10 +572,10 @@ graph LR
 
 `SKILL.md:46-52`：
 
-| Level | Behavior |
-|---|---|
-| **lite** | Build what was asked. Name the smaller option in one line and let the user pick. |
-| **full** | The rules above. Default. |
+| Level     | Behavior                                                                                     |
+| --------- | -------------------------------------------------------------------------------------------- |
+| **lite**  | Build what was asked. Name the smaller option in one line and let the user pick.             |
+| **full**  | The rules above. Default.                                                                    |
 | **ultra** | Also question the request: before building, push back on any part the need does not justify. |
 
 逐行拆：
