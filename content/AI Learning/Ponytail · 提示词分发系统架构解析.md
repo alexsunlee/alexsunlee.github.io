@@ -16,7 +16,7 @@ version: v5.3.3 (main 96608e0)
 > [!summary] 一句话结论
 > **Ponytail 不是代码工具，而是一套「提示词分发系统」，外加一层只在 Claude Code 里出现的「度量面板」。**
 > 真正的产品只有一段文字：`skills/ponytail/SKILL.md`，共 52 行（前 11 行是 YAML frontmatter，正文 40 行）。仓库里其余绝大多数文件，都是把这段文字送进各个 agent 宿主的**轻量适配器**（只负责转接，不含规则逻辑）。README 徽章写「20 agents」，`docs/agent-portability.md` 实际列了 35 个具名宿主外加一行「Generic agents」。
-> 架构公式：**一份提示词 + 一个构建器 + N 个轻量适配器 + 一套防漂移 CI（字节比对 + 关键子串金丝雀）**。会话开始时，它还会附上一张**代码地图**；在 Claude Code 里，提示框上方还有一条 **band**，实时显示这个任务的成本、复用率和测试状态，并把每个任务记进本地的 **board**。
+> 架构公式：**一份 skill + 一个构建器 + N 个轻量适配器 + 一套防漂移 CI（字节比对 + 关键子串金丝雀）**。会话开始时，它还会附上一张**代码地图**；在 Claude Code 里，提示框上方还有一条 **band**，实时显示这个任务的成本、复用率和测试状态，并把每个任务记进本地的 **board**。
 
 阅读路径（五章由浅入深，结构与 [[Ponytail · YouTube 演讲稿]] 一致）：
 1. **是什么、有什么用**：[[#1. Ponytail 是什么、能做什么]]，先看一句话定义、要解决的问题，再看实测数据里的优点和代价
@@ -682,11 +682,11 @@ review 的 description 则把用户的**原话**直接列为触发词："review 
 
 ### 3.1 全景：四个部件
 
-架构公式：**一份提示词 + 一个构建器 + N 个轻量适配器 + 一套防漂移 CI**。
+架构公式：**一份 skill + 一个构建器 + N 个轻量适配器 + 一套防漂移 CI**。
 
 ```mermaid
 graph LR
-    P["📄 一份提示词<br/>skills/ponytail/SKILL.md"] --> B["⚙️ 一个构建器<br/>ponytail-instructions.js"]
+    P["📄 一份 skill<br/>skills/ponytail/SKILL.md"] --> B["⚙️ 一个构建器<br/>ponytail-instructions.js"]
     MAP["🗺️ 代码地图<br/>ponytail-map.js"] --> A
     B --> A["🔌 N 个轻量适配器<br/>hooks / 插件 / 扩展"]
     P -.->|"精简版手工同步"| G["📋 AGENTS.md<br/>+ 7 份规则副本"]
@@ -697,7 +697,7 @@ graph LR
 
 | 部件 | 是什么 | 详见 |
 |---|---|---|
-| 一份提示词 | `SKILL.md`（运行时用）+ `AGENTS.md`（精简常驻版，给只认纯文本的宿主） | [[#3.2 单一事实来源 + 分发]] |
+| 一份 skill | `SKILL.md`（运行时用）+ `AGENTS.md`（精简常驻版，给只认纯文本的宿主） | [[#3.2 单一事实来源 + 分发]] |
 | 一个构建器 | `hooks/ponytail-instructions.js`：读 SKILL.md，按级别过滤，加一行头部 | [[#3.4 输入与输出：一次注入送了什么]] |
 | N 个轻量适配器 | hooks、插件、扩展、规则副本，按宿主能力分三档 | [[#3.3 三层注入（tier 模型）]] |
 | 一套防漂移 CI | 7 份副本字节比对 + 关键子串金丝雀 | [[#4.1 防漂移机制（仓库里真正的「代码」）]] |
@@ -731,7 +731,7 @@ graph LR
     AG -->|"宿主直接读取"| IA["Zed / Jules / Amp / Junie /<br/>Antigravity IDE / Kimi systemPromptPath …"]
 ```
 
-关键点：**除 Hermes（Python）外，所有「代码型」宿主共用同一个 JS 构建器**，而不是各自复制一份提示词。
+关键点：**skill 只有一份；除 Hermes（Python）外，所有「代码型」宿主还共用同一个 JS 构建器**。
 
 - `.opencode/plugins/ponytail.mjs:23-26` 用 `createRequire` 在 ESM 里加载 CJS 模块，`require` 同一个构建器
 - `pi-extension/index.js` 开头用同样的手法
@@ -744,7 +744,7 @@ graph LR
 > `AGENTS.md` 就是 `SKILL.md` 去掉 frontmatter、Levels 表和「Active for the whole session…」那一行，再换个标题、末尾加一句自指说明。JS fallback 也**逐字等于** `AGENTS.md` 的正文。「精简版」和「完整版」之间只剩格式差异。
 
 > [!tip] 可迁移的设计决策
-> 要支持 N 个宿主时，**不要复制提示词，要复制适配器**。提示词只能有一份，否则 N 份文本必然漂移。Kilo Code、Oh My Pi、Qwen Code、Goose、Muse、Freebuff、DeepSeek Harness、Antigravity CLI 这些宿主都**只有文档**，直接复用已有插件、skills、`commands/` 或 `AGENTS.md`；CodeBuddy 只多一个探测分支，Kimi Code 只多一个 manifest。这就是「轻量适配器」的回报。
+> **skill 只有一份，适配器可以有无限多。**要支持一个新宿主，就加一个适配器，skill 一个字不改；如果每个宿主各存一份规则，N 份文本必然漂移。Kilo Code、Oh My Pi、Qwen Code、Goose、Muse、Freebuff、DeepSeek Harness、Antigravity CLI 这些宿主都**只有文档**，直接复用已有插件、skills、`commands/` 或 `AGENTS.md`；CodeBuddy 只多一个探测分支，Kimi Code 只多一个 manifest。这就是「轻量适配器」的回报。
 
 ### 3.3 三层注入（tier 模型）
 

@@ -11,7 +11,7 @@ title: AI 项目拆解
 <p class="note-card-summary">一段 40 行的提示词，让 AI 写代码时先复用、少写、不省测试。拆解它如何经一个构建器和一批轻量适配器送进 35 个 agent 宿主、靠防漂移 CI 保持一致，以及 Claude Code 里实时显示成本与复用率的 band。</p>
 <p class="note-card-meta"><span>更新于 2026-11-02</span><span>基于 ponytail v5.3.3</span><span>约 144 分钟</span></p>
 <p class="note-card-tags"><span>Prompt 工程</span><span>Agent</span><span>Claude Code</span></p>
-<p class="note-card-actions"><a class="note-card-read" href="/ai-learning/ponytail-·-提示词分发系统架构解析">阅读原文 →</a><a class="note-card-ppt" href="/ai-learning/ponytail-·-提示词分发系统架构解析.pptx" download data-router-ignore>下载 PPT · 30 页 · 0.6 MB</a></p>
+<p class="note-card-actions"><a class="note-card-read" href="/ai-learning/ponytail-·-提示词分发系统架构解析">阅读原文 →</a><a class="note-card-ppt" href="/ai-learning/ponytail-·-提示词分发系统架构解析.pptx" download data-router-ignore>下载 PPT · 30 页 · 1.8 MB</a></p>
 </div>
 <div class="note-card">
 <a class="note-card-title" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析">Karpathy-Skills · LLM 编码行为准则解析</a>
