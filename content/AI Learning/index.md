@@ -18,6 +18,6 @@ title: AI 项目拆解
 <p class="note-card-summary">约 70 行的行为准则，把 Karpathy 对 LLM 写代码的三类吐槽（不澄清、过度设计、越界修改）提炼成 4 条原则，同时打包给 Claude Code 和 Cursor。它不给 agent 增加能力，只加「刹车」和「验收标准」。</p>
 <p class="note-card-meta"><span>更新于 2026-10-09</span><span>基于 commit 2c60614</span><span>约 23 分钟</span></p>
 <p class="note-card-tags"><span>行为准则</span><span>Claude Code</span><span>Cursor</span></p>
-<p class="note-card-actions"><a class="note-card-read" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析">阅读原文 →</a><a class="note-card-ppt" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析.pptx" download data-router-ignore>下载 PPT · 13 页 · 0.2 MB</a></p>
+<p class="note-card-actions"><a class="note-card-read" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析">阅读原文 →</a><a class="note-card-ppt" href="/ai-learning/karpathy-skills-·-llm-编码行为准则解析.pptx" download data-router-ignore>下载 PPT · 19 页 · 1.5 MB</a></p>
 </div>
 </div>
